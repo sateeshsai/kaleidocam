@@ -1,4 +1,5 @@
 <script lang="ts">
+  import LoaderCircle from "@lucide/svelte/icons/loader-circle";
   import { cn } from "$lib/utils";
   import { onMount } from "svelte";
   import Overlay from "./_components/Overlay.svelte";
@@ -6,6 +7,7 @@
   import SwitchCamera from "@lucide/svelte/icons/switch-camera";
   import ZoomIn from "@lucide/svelte/icons/zoom-in";
   import ZoomOut from "@lucide/svelte/icons/zoom-out";
+  import { slide } from "svelte/transition";
 
   let stream: MediaStream | undefined = undefined;
   let imageCapture: ImageCapture;
@@ -58,6 +60,8 @@
     },
   };
   function startVideo() {
+    loading = true;
+
     if (stream) {
       stream.getVideoTracks()[0].stop();
       stream.getTracks().forEach((track) => {
@@ -93,10 +97,12 @@
       // );
       const track = mediaStream.getVideoTracks()[0];
       imageCapture = new ImageCapture(track);
+      loading = false;
     });
   }
 
   function grabFrame() {
+    loading = true;
     imageCapture
       .grabFrame()
       .then((imageBitmap) => {
@@ -227,3 +233,9 @@
     </div>
   </div>
 </main>
+
+{#if loading}
+  <div transition:slide|global={{ axis: "y" }} class="loading h-full w-full absolute top-0 left-0 bg-black grid place-items-center text-background z-100">
+    <LoaderCircle class="animate-spin" />
+  </div>
+{/if}

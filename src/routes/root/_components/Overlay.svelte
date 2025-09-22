@@ -21,7 +21,7 @@
   </svg>
 </div>
 
-<div class="top-left absolute top-0 left-0">
+<div class="top-left absolute top-0 left-0 scale-90 origin-top-left">
   <svg width="141" height="335" viewBox="0 0 141 335" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_334_101)">
       <path class="drop-shadow" d="M3.07007 0V77.61L86.8601 49.56L3.07007 0Z" fill="#86BC25" />
@@ -59,7 +59,7 @@
 <div class="absolute shadow-[0px_-5px_10px_hsl(0,0%,0%,.3)] left-0 bottom-[min(16vw,16svh)] w-full h-8 bg-[#33f0ff] -rotate-3 -translate-y-2" style="--padding:12px;"></div>
 
 <div class="right absolute bottom-12 right-6 drop-shadow-lg">
-  <svg class="animate-spin" style="animation-duration: 5s;" width="262" height="253" viewBox="0 0 262 253" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg class="animate-spin ease-in" style="animation-duration: 5s;" width="262" height="253" viewBox="0 0 262 253" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_334_116)">
       <path d="M193.168 90.2046L199.336 147.024L225.266 115.533L193.168 90.2046Z" fill="#00AFC0" />
       <path d="M112.759 176.69L82.2897 182.304L65.7432 202.367L91.5871 248.686L138.293 222.745L135.301 197.486L112.759 176.69Z" fill="#00A551" />

@@ -162,7 +162,7 @@
   let canvasEl: HTMLCanvasElement | undefined = $state();
 </script>
 
-<main class=" relative max-w-[100vw] max-h-[100svh] overflow-hidden bg-black">
+<main in:slide|global class=" relative max-w-[100vw] max-h-[100svh] overflow-hidden bg-black">
   <div class="relative h-[100svh] max-w-[100vw] grid content-start z-10">
     <video bind:this={videoEl} class=" border-2 border-purple-50 bg-black object-cover min-h-[100svh] min-w-[101vw] max-w-[101vw]" autoplay>
       <track kind="captions" />

@@ -168,7 +168,7 @@
       <track kind="captions" />
     </video>
 
-    <div bind:this={overlayForCanvasEl} class="pointer-events-none absolute top-0 left-0 origin-top-left w-[710px] h-[1278px] landscape:h-[710px] landscape:w-[1278px]" style="scale: {scaleFactor};">
+    <div bind:this={overlayForCanvasEl} class="pointer-events-none absolute top-0 left-0 origin-top-left w-[720px] h-[1280px] landscape:h-[720px] landscape:w-[1280px]" style="scale: {scaleFactor};">
       <Overlay />
     </div>
   </div>

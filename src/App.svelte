@@ -1,15 +1,10 @@
 <script>
-  import { LOCALMODE } from "$lib/const";
   import Head from "./routes/layout/Head.svelte";
   import Pwa from "./routes/layout/PWA.svelte";
 
   // import Shutter from "./routes/root/_components/Shutter.svelte";
   import Camera from "./routes/root/Camera.svelte";
   import CameraNew from "./routes/root/CameraNew.svelte";
-
-  import { injectAnalytics } from "@vercel/analytics/sveltekit";
-
-  injectAnalytics({ mode: LOCALMODE ? "development" : "production" });
 </script>
 
 <Pwa />
